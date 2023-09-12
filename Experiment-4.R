@@ -52,7 +52,17 @@ print(paste("Mean =",mean))
 print(paste("Variance =",var))
 
 
-##Q5
-f<-function(y) {
-  (3/4)*(1/4)^(sqrt(y)-1)
+#Q5
+prob <- function(y){
+  return((3/4)*(1/4)^((y^0.5)-1))
 }
+x_val<-c(1:5)
+y_val<- x_val^2
+prob_y <- prob(y_val)
+prob_y
+Ey2 <- sum(y_val*prob_y)
+Ey2
+second<- sum(y_val*y_val*prob_y)
+second
+var <- second - Ey2^2
+ var
